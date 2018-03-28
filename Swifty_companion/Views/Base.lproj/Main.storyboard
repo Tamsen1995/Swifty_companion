@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchController" customModule="Swifty_companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqz-Ny-FfQ">
+                                <rect key="frame" x="139" y="297.33333333333331" width="136" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-9C-sfl">
+                                <rect key="frame" x="164" y="337" width="85" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <segue destination="8CT-Mj-sVW" kind="show" identifier="userProfileSegue" id="guJ-jc-ztq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-yk-8KI">
+                                <rect key="frame" x="147" y="196" width="119" height="57.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please  type in a user's name to look up info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-6l-TsH">
+                                <rect key="frame" x="97" y="261" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dUf-6l-TsH" firstAttribute="top" secondItem="Ofc-yk-8KI" secondAttribute="bottom" constant="7.6699999999999999" id="3A7-j0-GS6"/>
+                            <constraint firstItem="jqz-Ny-FfQ" firstAttribute="top" secondItem="Ofc-yk-8KI" secondAttribute="bottom" constant="44" id="8lh-2h-kNE"/>
+                            <constraint firstItem="jqz-Ny-FfQ" firstAttribute="top" secondItem="dUf-6l-TsH" secondAttribute="bottom" constant="15.33" id="GBP-JX-Nb4"/>
+                            <constraint firstItem="77Y-9C-sfl" firstAttribute="top" secondItem="jqz-Ny-FfQ" secondAttribute="bottom" constant="9.6699999999999999" id="PPb-0P-jJ4"/>
+                            <constraint firstItem="77Y-9C-sfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="PTi-Vg-OMG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="77Y-9C-sfl" secondAttribute="bottom" constant="369" id="R3h-L8-j1P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jqz-Ny-FfQ" secondAttribute="trailing" constant="139" id="ReN-xP-teg"/>
+                            <constraint firstItem="Ofc-yk-8KI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="VKj-AM-D1d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofc-yk-8KI" secondAttribute="trailing" constant="148" id="W1j-Bj-sfX"/>
+                            <constraint firstItem="jqz-Ny-FfQ" firstAttribute="top" secondItem="Ofc-yk-8KI" secondAttribute="bottom" constant="44" id="Zh0-sa-1cb"/>
+                            <constraint firstItem="Ofc-yk-8KI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="eXI-oU-whH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dUf-6l-TsH" secondAttribute="trailing" constant="97" id="jzX-jO-Nho"/>
+                            <constraint firstItem="dUf-6l-TsH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="kwr-K4-6U8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="77Y-9C-sfl" secondAttribute="trailing" constant="165" id="pde-nh-AjI"/>
+                            <constraint firstItem="jqz-Ny-FfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="sqB-Gq-aOb"/>
+                            <constraint firstItem="77Y-9C-sfl" firstAttribute="top" secondItem="jqz-Ny-FfQ" secondAttribute="bottom" constant="9.6699999999999999" id="xVv-h9-lHD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchedForUser" destination="jqz-Ny-FfQ" id="iMy-nW-Hy4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="33.423913043478265"/>
+        </scene>
+        <!--Profile Controller-->
+        <scene sceneID="hfl-Ms-Cte">
+            <objects>
+                <viewController id="8CT-Mj-sVW" customClass="ProfileController" customModule="Swifty_companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8W-9v-W3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yAB-q9-uat"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szn-a6-mZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="33"/>
+        </scene>
+    </scenes>
+</document>
