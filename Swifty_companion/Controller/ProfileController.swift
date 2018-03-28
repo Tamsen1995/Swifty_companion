@@ -9,9 +9,14 @@
 import UIKit
 
 class ProfileController: UIViewController {
-
+    
     var username : String?
     var profile : ProfileInfo?
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +24,26 @@ class ProfileController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func prepareProfile() {
-        print(profile)
+        usernameLabel.text = self.profile?.login
+        emailLabel.text = self.profile?.email
+        phoneLabel.text = self.profile?.phone
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

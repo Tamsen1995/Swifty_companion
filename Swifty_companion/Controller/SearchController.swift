@@ -51,7 +51,7 @@ class SearchController: UIViewController {
                         print("performing userProfileSegue")
                         profileExtract = self.extractProfile(completion)
                         destinationVC.profile = profileExtract
-                        destinationVC.printProfile()
+                        destinationVC.prepareProfile()
                     }
                 }
             }
