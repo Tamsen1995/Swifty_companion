@@ -99,10 +99,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oro-8o-lEa">
+                                <rect key="frame" x="87" y="20" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Oro-8o-lEa" firstAttribute="top" secondItem="yAB-q9-uat" secondAttribute="top" id="7iw-cz-Ea8"/>
+                            <constraint firstItem="Oro-8o-lEa" firstAttribute="leading" secondItem="yAB-q9-uat" secondAttribute="leading" constant="87" id="91R-Hq-NkR"/>
                             <constraint firstItem="yAB-q9-uat" firstAttribute="trailing" secondItem="Smj-bT-HJv" secondAttribute="trailing" constant="107" id="A8t-hQ-2LO"/>
+                            <constraint firstItem="yAB-q9-uat" firstAttribute="trailing" secondItem="Oro-8o-lEa" secondAttribute="trailing" constant="87" id="HYb-41-Qba"/>
                             <constraint firstItem="Smj-bT-HJv" firstAttribute="top" secondItem="9iT-Co-sgR" secondAttribute="bottom" constant="8" id="Iil-zo-T4Q"/>
                             <constraint firstItem="9iT-Co-sgR" firstAttribute="top" secondItem="BL9-2D-xLd" secondAttribute="bottom" constant="8" id="MEd-e8-m1d"/>
                             <constraint firstItem="yAB-q9-uat" firstAttribute="trailing" secondItem="9iT-Co-sgR" secondAttribute="trailing" constant="107" id="NWj-Gb-fp8"/>
@@ -112,6 +118,7 @@
                             <constraint firstItem="9iT-Co-sgR" firstAttribute="leading" secondItem="yAB-q9-uat" secondAttribute="leading" constant="107" id="ZJq-Is-NKi"/>
                             <constraint firstItem="BL9-2D-xLd" firstAttribute="leading" secondItem="yAB-q9-uat" secondAttribute="leading" constant="107" id="gVv-A1-ZoW"/>
                             <constraint firstItem="9iT-Co-sgR" firstAttribute="top" secondItem="BL9-2D-xLd" secondAttribute="bottom" constant="8" id="mxn-ha-RBt"/>
+                            <constraint firstItem="BL9-2D-xLd" firstAttribute="top" secondItem="Oro-8o-lEa" secondAttribute="bottom" constant="38" id="oe5-wz-um4"/>
                             <constraint firstItem="BL9-2D-xLd" firstAttribute="top" secondItem="yAB-q9-uat" secondAttribute="top" constant="278" id="tTe-Jw-cQp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yAB-q9-uat"/>
@@ -119,6 +126,7 @@
                     <connections>
                         <outlet property="emailLabel" destination="9iT-Co-sgR" id="KJc-Gt-A1I"/>
                         <outlet property="phoneLabel" destination="Smj-bT-HJv" id="9KM-Le-4Br"/>
+                        <outlet property="profileImage" destination="Oro-8o-lEa" id="cqA-uP-c9d"/>
                         <outlet property="usernameLabel" destination="BL9-2D-xLd" id="bil-wo-oKA"/>
                     </connections>
                 </viewController>

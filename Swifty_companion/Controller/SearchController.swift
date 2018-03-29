@@ -21,7 +21,7 @@ class SearchController: UIViewController {
         auth.get_token()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
     }
-
+    
     func extractProfile(_ completion: JSON?) -> ProfileInfo {
         var profileExtract = ProfileInfo()
         
@@ -30,7 +30,7 @@ class SearchController: UIViewController {
         profileExtract.wallet = (completion?["wallet"].rawString()) ?? ""
         profileExtract.phone = (completion?["phone"].rawString()) ?? ""
         profileExtract.level = (completion?["cursus_users"][0]["level"].rawString()) ?? ""
-        
+        profileExtract.imageURL = (completion?["image_url"].rawString()) ?? ""        
         return profileExtract
         
     }

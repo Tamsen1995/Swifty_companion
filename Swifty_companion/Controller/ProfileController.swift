@@ -16,7 +16,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
+    @IBOutlet weak var profileImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,25 @@ class ProfileController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+        
+    func loadImage(_ strURL: String) {
+        print("Inside of loadimage")
+        print(strURL)
+        if let url = NSURL(string: strURL) {
+            if let data = NSData(contentsOf: url as URL) {
+                profileImage.image = UIImage(data: data as Data)
+            } else {
+                fatalError("Error in the loading of image")
+            }
+        }
+        
+    }
     
     func prepareProfile() {
         usernameLabel.text = self.profile?.login
         emailLabel.text = self.profile?.email
         phoneLabel.text = self.profile?.phone
+        if let imageURL = self.profile?.imageURL { loadImage(imageURL) }
     }
     
     /*

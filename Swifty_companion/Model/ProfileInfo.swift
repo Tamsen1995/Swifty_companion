@@ -14,4 +14,5 @@ struct ProfileInfo {
     var wallet : String = ""
     var phone : String = ""
     var level : String = ""
+    var imageURL : String = ""
 }
